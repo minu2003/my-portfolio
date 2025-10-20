@@ -24,7 +24,7 @@ const ProjectData = [
         shortdesc:
             "A responsive personal website built with Next.js and Tailwind CSS. Showcases projects, skills, and contact info. Designed with fast performance and smooth navigation.",
         image: portfolio,
-        techStack: ["Next JS", "Tailwind CSS", "CSS", "Git"],
+        techStack: ["Next JS", "Tailwind CSS", "CSS", "Vercel", "Git"],
         category: "Web Application",
         liveLink: "https://github.com/minu2003/my-portfolio.git",
     },

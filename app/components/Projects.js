@@ -57,7 +57,7 @@ export default function Projects() {
               </a>
             </div>
 
-            <h2 className="text-2xl font-semibold mt-4">{project.title}</h2>
+            <h2 className="text-2xl font-semibold mt-4 text-white">{project.title}</h2>
             
             {/* Description with see more functionality */}
             <div className="mt-2">
@@ -70,7 +70,7 @@ export default function Projects() {
               {project.techStack.map((tech, techIndex) => (
                 <span
                   key={techIndex}
-                  className="bg-gray-800 px-3 py-1 rounded text-sm"
+                  className="px-3 py-1 rounded text-sm bg-gray-400 text-gray-800 dark:bg-gray-800 dark:text-gray-600"
                 >
                   {tech}
                 </span>
