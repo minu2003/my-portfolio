@@ -1,4 +1,4 @@
-import { Poppins, Roboto, Nunito_Sans } from "next/font/google";
+import { Nunito_Sans, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -22,8 +22,10 @@ const nunitoSans = Nunito_Sans({
 export const metadata = {
   title: "Minuri Viranga Punchihewa",
   description: "Minuri's personal portfolio",
+  keywords: ["Minuri Viranga", "Minuri Viranga Punchihewa", "Software Engineer", "Front-end Developer", "Minuri Viranga Portfolio"],
+  authors: [{ name: "Minuri Viranga Punchihewa" }],
   icons:{
-    icon: "/favicon.ico",
+    icon: "/favicon.png",
   }
 };
 
