@@ -46,7 +46,7 @@ export const metadata = {
     siteName: "Minuri Viranga Portfolio",
     images: [
       {
-        url: "/favicon.png",
+        url: "/assets/nameicon.png", // ✅ Updated here
         width: 512,
         height: 512,
         alt: "Minuri Viranga Punchihewa Logo",
@@ -61,7 +61,7 @@ export const metadata = {
     description:
       "Front-End Developer skilled in React, Next.js, Tailwind CSS, and Flutter. Explore Minuri's projects and designs.",
     creator: "@minuriviranga",
-    images: ["/favicon.png"],
+    images: ["/assets/nameicon.png"], // ✅ Updated here
   },
   icons: {
     icon: "/favicon.png",
@@ -90,7 +90,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${poppins.variable} ${roboto.variable} ${nunitoSans.variable} antialiased`}
       >
-        {/* ✅ Organization schema for Google logo display */}
+        {/* ✅ Updated Organization schema for Google logo display */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -99,7 +99,7 @@ export default function RootLayout({ children }) {
               "@type": "Organization",
               name: "Minuri Viranga Punchihewa",
               url: "https://www.minuriviranga.com",
-              logo: "https://www.minuriviranga.com/favicon.png",
+              logo: "https://www.minuriviranga.com/assets/nameicon.png", // ✅ Updated here
               sameAs: [
                 "https://www.linkedin.com/in/minuri-viranga-b9bb3829a",
                 "https://github.com/minuriviranga",
