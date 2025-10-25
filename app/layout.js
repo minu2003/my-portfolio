@@ -1,7 +1,7 @@
 import { Nunito_Sans, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
 
-//  Fonts setup
+// Fonts setup
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
@@ -20,7 +20,7 @@ const nunitoSans = Nunito_Sans({
   weight: ["400", "700"],
 });
 
-//  SEO Metadata
+// SEO Metadata
 export const metadata = {
   title: "Minuri Viranga Punchihewa | Front-End Developer Portfolio",
   description:
@@ -46,10 +46,10 @@ export const metadata = {
     siteName: "Minuri Viranga Portfolio",
     images: [
       {
-        url: "/favicon.png", // your OG image (1200x630 recommended)
-        width: 1200,
-        height: 630,
-        alt: "Minuri Viranga Portfolio Preview",
+        url: "/favicon.png",
+        width: 512,
+        height: 512,
+        alt: "Minuri Viranga Punchihewa Logo",
       },
     ],
     locale: "en_US",
@@ -65,6 +65,8 @@ export const metadata = {
   },
   icons: {
     icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
   alternates: {
     canonical: "https://www.minuriviranga.com",
@@ -88,6 +90,23 @@ export default function RootLayout({ children }) {
       <body
         className={`${poppins.variable} ${roboto.variable} ${nunitoSans.variable} antialiased`}
       >
+        {/* ✅ Organization schema for Google logo display */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Minuri Viranga Punchihewa",
+              url: "https://www.minuriviranga.com",
+              logo: "https://www.minuriviranga.com/favicon.png",
+              sameAs: [
+                "https://www.linkedin.com/in/minuri-viranga-b9bb3829a",
+                "https://github.com/minuriviranga",
+              ],
+            }),
+          }}
+        />
         {children}
       </body>
     </html>
