@@ -61,7 +61,7 @@ export const metadata = {
     description:
       "Front-End Developer skilled in React, Next.js, Tailwind CSS, and Flutter. Explore Minuri's projects and designs.",
     creator: "@minuriviranga",
-    images: ["/assets/nameicon.png"], // ✅ Updated here
+    images: ["/assets/nameicon.png"], //  Updated here
   },
   icons: {
     icon: "/favicon.png",
