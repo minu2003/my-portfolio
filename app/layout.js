@@ -46,7 +46,7 @@ export const metadata = {
     siteName: "Minuri Viranga Portfolio",
     images: [
       {
-        url: "/og-image.jpg", // your OG image (1200x630 recommended)
+        url: "/favicon.png", // your OG image (1200x630 recommended)
         width: 1200,
         height: 630,
         alt: "Minuri Viranga Portfolio Preview",
@@ -61,7 +61,7 @@ export const metadata = {
     description:
       "Front-End Developer skilled in React, Next.js, Tailwind CSS, and Flutter. Explore Minuri's projects and designs.",
     creator: "@minuriviranga",
-    images: ["/og-image.jpg"],
+    images: ["/favicon.png"],
   },
   icons: {
     icon: "/favicon.png",
