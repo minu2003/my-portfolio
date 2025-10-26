@@ -1,9 +1,16 @@
 "use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import ProjectData from "./Project-Details";
 
 export default function Projects() {
+  const router = useRouter();
+
+  const handleProjectClick = (project) => {
+    const projectData = encodeURIComponent(JSON.stringify(project));
+    router.push(`/projects-Description?project=${projectData}`);
+  }
 
   return (
     <div id="projects">
@@ -16,7 +23,9 @@ export default function Projects() {
             className="bg-gradient-to-br from-[#111827] to-[#1f2937] rounded-2xl p-4 shadow-lg transition-all duration-300 hover:to-[#18222e]"
           >
             {/* Image with hover effect */}
-            <div className="relative flex justify-center items-center h-70 bg-[#0f172a] rounded-xl mb-6 overflow-hidden group cursor-pointer">
+            <div className="relative flex justify-center items-center h-70 bg-[#0f172a] rounded-xl mb-6 overflow-hidden group cursor-pointer"
+            onClick={() => handleProjectClick(project)}
+            >
               {typeof project.image === "string" ? (
                 <Image
                   src={project.image}
@@ -70,7 +79,7 @@ export default function Projects() {
               {project.techStack.map((tech, techIndex) => (
                 <span
                   key={techIndex}
-                  className="px-3 py-1 rounded text-sm bg-gray-400 text-gray-800 dark:bg-gray-800 dark:text-gray-600"
+                  className="px-3 py-1 rounded text-sm bg-gray-400 text-gray-800 dark:bg-gray-800 dark:text-gray-300"
                 >
                   {tech}
                 </span>

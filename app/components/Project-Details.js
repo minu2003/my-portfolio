@@ -1,4 +1,13 @@
+import greenSM1 from "@/app/assets/project-description/market1.png";
+import greenSM2 from "@/app/assets/project-description/market2.png";
+import movieLibrary1 from "@/app/assets/project-description/MLibrary.png";
+import cinemax1 from "@/app/assets/project-description/movie1.png";
+import cinemax2 from "@/app/assets/project-description/movie2.png";
+import portfolio1 from "@/app/assets/project-description/portfolio.png";
+import vLearn1 from "@/app/assets/project-description/VI.png";
 import cinemax from "@/app/assets/projects/cinemax.jpg";
+import dualTrackerImg2 from "@/app/assets/projects/Dual Tracker-dark mode.jpg";
+import dualTrackerImg1 from "@/app/assets/projects/Dual-tracker-lightmode.jpg";
 import dualTrackerImg from "@/app/assets/projects/dual-tracker.jpg";
 import greenSM from "@/app/assets/projects/greenSM.jpg";
 import movieLibrary from "@/app/assets/projects/movie.jpg";
@@ -13,6 +22,8 @@ const ProjectData = [
         shortdesc:
             "A mobile app for tracking both personal and business finances.Built using Flutter and Firebase for real-time updates.Features secure login, dashboards, transaction insights.",
         image: dualTrackerImg,
+        image1: dualTrackerImg1,
+        image2:  dualTrackerImg2,
         techStack: ["Dart", "Flutter", "Firebase", "Git"],
         category: "Mobile Development",
         liveLink: "https://github.com/minu2003/Dual-Money-Tracker.git",
@@ -24,17 +35,21 @@ const ProjectData = [
         shortdesc:
             "A responsive personal website built with Next.js and Tailwind CSS. Showcases projects, skills, and contact info. Designed with fast performance and smooth navigation.",
         image: portfolio,
+        image1: portfolio1,
         techStack: ["Next JS", "Tailwind CSS", "CSS", "Vercel", "Git"],
         category: "Web Application",
         liveLink: "https://github.com/minu2003/my-portfolio.git",
+
     },
     {
-        title: "Cinemax ",
+        title: "Cinemax",
         description:
             "A full-stack movie ticket booking platform developed collaboratively in a team of 8, featuring real-time seat selection, scheduling, and secure online payments. I focused on frontend development using React.js, Tailwind CSS, and JavaScript, creating reusable and optimized components that improved performance by 20–50%. On the backend, I developed RESTful APIs with Node.js and Express.js, implemented WebSocket-based real-time seat updates, and handled user authentication. The system integrates MongoDB via Mongoose for data management and supports secure payment processing through PayPal. I also used Docker for containerization to streamline deployment and ensure environment consistency.",
         shortdesc:
             "A full-stack movie ticket booking platform with real-time seat updates. Includes secure payments, login, and dynamic UI. Built with React, Node.js, MongoDB, and WebSockets.",
         image: cinemax,
+        image1: cinemax1,
+        image2: cinemax2,
         techStack: ["React js", "Node.js", "MongoDB","Express js","HTML","CSS","Javacript","Tailwind CSS", "Paypal"],
         category: "Web Application",
         liveLink: "https://github.com/Dinethchathurya/Movie-Booking-System.git",
@@ -46,6 +61,8 @@ const ProjectData = [
         shortdesc:
             "An e-commerce platform with product browsing, cart, and PayPal checkout. Backend powered by Java and SQL. Optimized for fast queries and responsive design.",
         image: greenSM,
+        image1: greenSM1,
+        image2: greenSM2,
         techStack: ["HTML", "CSS", "Javascript", "MUI","SQL","Java","Paypal","Git"],
         category: "Web Application",
         liveLink: "https://github.com/minu2003/Green-Super-Market.git",
@@ -57,6 +74,7 @@ const ProjectData = [
         shortdesc:
             "An interactive learning platform built using React and Tailwind CSS. Users can explore and view course content easily. Focused on clean design and mobile responsiveness.",
         image: vLearn,
+        image1: vLearn1,
         techStack: ["React JS", "Javascript", "Tailwind CSS","Html","CSS", "Git"],
         category: "Web Application",
         liveLink: "https://github.com/minu2003/VI-Learning.git",
@@ -68,6 +86,7 @@ const ProjectData = [
         shortdesc:
             "A Vue.js-based movie browsing app with search and filter features. Clean UI displays posters and movie info in cards. Includes a contact form and Google Maps integration.",
         image: movieLibrary,
+        image1: movieLibrary1,
         techStack: ["Vue JS", "Javascript", "Tailwind CSS","Html","CSS", "Git"],
         category: "Web Application",
         liveLink: "https://github.com/minu2003/movie-library.git",
