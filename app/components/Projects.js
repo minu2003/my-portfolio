@@ -8,9 +8,9 @@ export default function Projects() {
   const router = useRouter();
 
   const handleProjectClick = (project) => {
-    const projectData = encodeURIComponent(JSON.stringify(project));
-    router.push(`/projects-Description?project=${projectData}`);
-  }
+    const encoded = encodeURIComponent(JSON.stringify(project));
+    router.push(`/projects-Description?project=${encoded}`);
+  };  
 
   return (
     <div id="projects">
