@@ -5,6 +5,7 @@ import cinemax1 from "@/app/assets/project-description/movie1.png";
 import cinemax2 from "@/app/assets/project-description/movie2.png";
 import portfolio1 from "@/app/assets/project-description/portfolio.png";
 import vLearn1 from "@/app/assets/project-description/VI.png";
+import vLearn2 from "@/app/assets/project-description/VI-1.png";
 import cinemax from "@/app/assets/projects/cinemax.jpg";
 import dualTrackerImg2 from "@/app/assets/projects/Dual Tracker-dark mode.jpg";
 import dualTrackerImg1 from "@/app/assets/projects/Dual-tracker-lightmode.jpg";
@@ -75,6 +76,7 @@ const ProjectData = [
             "An interactive learning platform built using React and Tailwind CSS. Users can explore and view course content easily. Focused on clean design and mobile responsiveness.",
         image: vLearn,
         image1: vLearn1,
+        image2: vLearn2,
         techStack: ["React JS", "Javascript", "Tailwind CSS","Html","CSS", "Git"],
         category: "Web Application",
         liveLink: "https://github.com/minu2003/VI-Learning.git",

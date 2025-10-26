@@ -55,9 +55,9 @@ export default function ProjectDescription() {
       case "Green Super Market":
         return [project.image1, project.image2];
       case "VI Learning Platform":
-        return [project.image1];
+        return [project.image1, project.image2];
       case "Movie library":
-        return [project.image, project.image1];
+        return [project.image1];
       default:
         return [project.image1];
     }
