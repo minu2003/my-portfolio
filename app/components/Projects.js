@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
@@ -18,8 +19,12 @@ export default function Projects() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-2 sm:px-4 md:px-8 xl:px-44 mt-10 w-full">
         {ProjectData.map((project, index) => (
-          <div
+          <motion.div
             key={index}
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
             className="bg-gradient-to-br from-[#111827] to-[#1f2937] rounded-2xl p-4 shadow-lg transition-all duration-300 hover:to-[#18222e]"
           >
             {/* Image with hover effect */}
@@ -85,7 +90,7 @@ export default function Projects() {
                 </span>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

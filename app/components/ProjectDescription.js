@@ -67,31 +67,31 @@ export default function ProjectDescription() {
 
   return (
     <div className="min-h-screen bg-[#0f172a] text-white">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-4 md:py-8">
         {/* 🔙 Back Button */}
         <button
           onClick={() => router.push("/")}
-          className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors mb-8"
+          className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors mb-4 md:mb-8"
         >
           <FaArrowLeft className="w-4 h-4" />
-          Back to Portfolio
+          <span className="text-sm md:text-base">Back to Portfolio</span>
         </button>
 
         {/* 🧱 Project Details Box */}
-        <div className="bg-gradient-to-br from-[#111827] to-[#1f2937] rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
+        <div className="bg-gradient-to-br from-[#111827] to-[#1f2937] rounded-xl md:rounded-2xl p-4 md:p-8 shadow-lg max-w-4xl mx-auto">
           {/* Title and GitHub Links */}
-          <div className="flex justify-between items-start mb-6">
-            <h1 className="text-4xl font-bold text-white">{project.title}</h1>
-            <div className="flex gap-4">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-start items-center mb-4 md:mb-6 gap-4">
+            <h1 className="text-2xl md:text-4xl font-bold text-white text-center md:text-left">{project.title}</h1>
+            <div className="flex flex-wrap gap-2 md:gap-4">
               {/* GitHub */}
               <a
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg transition-colors"
+                className="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 px-6 py-2 md:px-4 rounded-lg transition-colors text-xs md:text-sm"
               >
-                <FaGithub className="w-5 h-5" />
-                <span className="text-sm">GitHub</span>
+                <FaGithub className="w-4 h-4 md:w-5 md:h-5" />
+                <span>GitHub</span>
                 <FaExternalLinkAlt className="w-3 h-3" />
               </a>
 
@@ -101,9 +101,9 @@ export default function ProjectDescription() {
                   href="https://minuriviranga.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors"
+                  className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-2 md:px-4 rounded-lg transition-colors text-xs md:text-sm"
                 >
-                  <span className="text-sm">Website</span>
+                  <span>Website</span>
                   <FaExternalLinkAlt className="w-3 h-3" />
                 </a>
               )}
@@ -111,17 +111,17 @@ export default function ProjectDescription() {
           </div>
 
           {/* Description */}
-          <div className="mb-8">
-            <p className="text-gray-400 leading-relaxed text-lg">
+          <div className="mb-6 md:mb-8">
+            <p className="text-gray-400 leading-relaxed text-base md:text-lg text-center md:text-left">
               {project.description}
             </p>
           </div>
 
           {/* Images */}
-          <div className="mb-8">
-            <div className="grid grid-cols-1 gap-6">
+          <div className="mb-6 md:mb-8">
+            <div className="grid grid-cols-1 gap-4 md:gap-6">
               {projectImages.map((image, index) => (
-                <div key={index} className="bg-[#0f172a] rounded-xl p-4">
+                <div key={index} className="bg-[#0f172a] rounded-lg md:rounded-xl p-2 md:p-4">
                   <Image
                     src={image}
                     alt={`${project.title} Screenshot ${index + 1}`}

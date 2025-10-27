@@ -1,4 +1,5 @@
 import { Nunito_Sans, Poppins, Roboto } from "next/font/google";
+import CustomCursor from "./components/CustomCursor";
 import "./globals.css";
 
 //  Fonts setup
@@ -88,6 +89,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${poppins.variable} ${roboto.variable} ${nunitoSans.variable} antialiased`}
       >
+        <CustomCursor />
         {children}
       </body>
     </html>
