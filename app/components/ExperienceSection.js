@@ -4,7 +4,7 @@ export default function ExperienceSection() {
   return (
     <div id="experience">
     <section className="text-white py-10 px-6 md:px-16 mt-15">
-      <h2 className="text-5xl text-center mb-10 text-gray-900 dark:text-white">Experience</h2>
+      <h2 className="text-5xl text-center mb-10 text-white">Experience</h2>
       
       <div className="max-w-4xl mx-auto bg-[#111827] p-15 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow animate-zoomIn">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
