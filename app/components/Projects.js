@@ -84,7 +84,7 @@ export default function Projects() {
               {project.techStack.map((tech, techIndex) => (
                 <span
                   key={techIndex}
-                  className="px-3 py-1 rounded text-sm bg-gray-400 text-gray-800 dark:bg-gray-800 dark:text-gray-300"
+                  className="px-3 py-1 rounded text-sm bg-gray-800 text-gray-300"
                 >
                   {tech}
                 </span>
