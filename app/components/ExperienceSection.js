@@ -16,9 +16,9 @@ export default function ExperienceSection() {
         </div>
 
         <ul className="mt-4 list-disc list-inside text-gray-300 space-y-1">
-          <li>Managing and monitoring network threats and vulnerabilities.</li>
-          <li>Learning and working with enterprise firewalls and security tools.</li>
-          <li>Assisting in incident response and threat analysis.</li>
+          <li>Monitor and manage firewalls to ensure secure network operations.</li>
+          <li>Analyze network traffic and security alerts to identify potential threats.</li>
+          <li>Learn and work with network security tools and firewall policies.</li>
           <li>Developing foundational skills in cybersecurity management and monitoring.</li>
         </ul>
       </div>
