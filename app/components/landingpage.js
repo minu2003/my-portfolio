@@ -1,5 +1,5 @@
 "use client";
-import MinuriImage from "@/app/assets/minuri1.png";
+import MinuriImage from "@/app/assets/minuri2.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
