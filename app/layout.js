@@ -25,7 +25,7 @@ const nunitoSans = Nunito_Sans({
 export const metadata = {
   title: "Minuri Viranga Punchihewa | Software Developer",
   description:
-    "I'm Minuri Viranga, a passionate Front-End Developer skilled in React, Next.js, Tailwind CSS, and Flutter. Explore my portfolio and projects.",
+    "I'm Minuri Viranga, a passionate Full-Stack Developer with strong expertise in front-end technologies like React, Next.js, Tailwind CSS, and Flutter, along with back-end development using Node.js and databases. Explore my portfolio and projects.",
   keywords: [
     "Minuri Viranga",
     "Minuri Viranga Punchihewa",
