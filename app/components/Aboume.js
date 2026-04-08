@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export default function AboutMe() {
     // Typing animation state
     const [displayedText, setDisplayedText] = useState("");
-    const fullText = "I'm a passionate and detail-oriented Software Engineering graduate with over 3 years of experience in front-end, full-stack, and mobile application development. I enjoy transforming ideas into responsive, user-friendly digital experiences through clean and efficient code. Driven by curiosity and continuous learning, I thrive in collaborative environments where I can contribute to building innovative and impactful solutions that make a real difference.";
+    const fullText = "I'm a passionate and detail-oriented Software Engineering graduate with over 4 years of experience in front-end, full-stack, and mobile application development. I enjoy transforming ideas into responsive, user-friendly digital experiences through clean and efficient code. Driven by curiosity and continuous learning, I thrive in collaborative environments where I can contribute to building innovative and impactful solutions that make a real difference.";
 
     useEffect(() => {
         let currentIndex = 0;
