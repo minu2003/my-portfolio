@@ -23,7 +23,7 @@ const nunitoSans = Nunito_Sans({
 
 //  SEO Metadata
 export const metadata = {
-  title: "Minuri Viranga Punchihewa | Software Developer",
+  title: "Minuri Viranga Punchihewa | Software Engineer",
   description:
     "I'm Minuri Viranga, a passionate Full-Stack Developer with strong expertise in front-end technologies like React, Next.js, Tailwind CSS, and Flutter, along with back-end development using Node.js and databases. Explore my portfolio and projects.",
   keywords: [
