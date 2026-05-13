@@ -7,13 +7,13 @@ import Projects from "./components/Projects";
 
 export default function Home() {
   return (
-    <div className="" id="home">
-      <Navbar/>
-      <LandingPage/>
-      <AboutMe/>
-      <Projects/>
-      <ExperienceSection/>
-      <Footer/>
+    <div className="relative" id="home">
+      <Navbar />
+      <LandingPage />
+      <AboutMe />
+      <Projects />
+      <ExperienceSection />
+      <Footer />
     </div>
   );
 }

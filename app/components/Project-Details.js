@@ -13,9 +13,23 @@ import dualTrackerImg from "@/app/assets/projects/dual-tracker.jpg";
 import greenSM from "@/app/assets/projects/greenSM.jpg";
 import movieLibrary from "@/app/assets/projects/movie.jpg";
 import portfolio from "@/app/assets/projects/portfolio.jpg";
+import sinetcom from "@/app/assets/projects/sinetcom.png";
 import vLearn from "@/app/assets/projects/VI-Learn.jpg";
 
 const ProjectData = [
+    {
+        title: "Sinetcom Official Website",
+        description:
+            "Developed the official corporate website for Sinetcom (Pvt) Ltd using Next.js, Node JS, JavaScript, Tailwind CSS, HTML5, and modern responsive UI practices, ensuring optimized performance and SEO-friendly architecture. Integrated an AI-powered chatbot using OpenAI API, n8n automation workflows, and Pinecone vector database to enable intelligent document-based responses and automated customer interaction. Implemented API integrations and backend communication workflows, including document retrieval from cloud storage and real-time query processing. Deployed and managed the application using VPS hosting on Hostinger, improving reliability and scalability of the chatbot and automation services.",
+        shortdesc:
+            "AI-powered corporate website with OpenAI chatbot, n8n automation, and Pinecone vector DB. Built with Next.js and deployed on VPS.",
+        image: sinetcom,
+        image1: sinetcom,
+        techStack: ["Next.js", "Node.js", "JavaScript", "Tailwind CSS", "OpenAI API", "n8n", "Pinecone", "VPS"],
+        category: "Web Application",
+        liveLink: "https://github.com/minu2003/sinetcom-website.git",
+        status: "Ongoing",
+    },
     {
         title: "Dual Money Tracker",
         description:

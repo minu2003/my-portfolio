@@ -1,31 +1,23 @@
-import { Nunito_Sans, Poppins, Roboto } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import CustomCursor from "./components/CustomCursor";
 import "./globals.css";
 
-//  Fonts setup
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-const roboto = Roboto({
-  variable: "--font-roboto",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-const nunitoSans = Nunito_Sans({
-  variable: "--font-nunito-sans",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
-
-//  SEO Metadata
 export const metadata = {
   title: "Minuri Viranga Punchihewa | Software Engineer",
   description:
-    "Software Engineer with 3+ years of Hands-on experience in developing web and mobile applications. Skilled in delivering scalable, high-performance, and user-centric solutions, with expertise in modern software architecture, AI-driven systems, and cloud deployment.",
+    "Software Engineer with 4+ years of experience in developing web and mobile applications. Skilled in delivering scalable, high-performance, and user-centric solutions.",
   keywords: [
     "Minuri Viranga",
     "Minuri Viranga Punchihewa",
@@ -42,12 +34,12 @@ export const metadata = {
   openGraph: {
     title: "Minuri Viranga Punchihewa | Portfolio",
     description:
-      "Explore projects and works by Minuri Viranga, a Front-End Developer specializing in modern web technologies like React, Next.js, and Tailwind CSS.",
+      "Explore projects and works by Minuri Viranga, a Software Engineer specializing in modern web technologies like React, Next.js, and Flutter.",
     url: "https://www.minuriviranga.com",
     siteName: "Minuri Viranga Portfolio",
     images: [
       {
-        url: "/og-image.jpg", // your OG image (1200x630 recommended)
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Minuri Viranga Portfolio Preview",
@@ -60,7 +52,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Minuri Viranga Punchihewa | Portfolio",
     description:
-      "Front-End Developer skilled in React, Next.js, Tailwind CSS, and Flutter. Explore Minuri's projects and designs.",
+      "Software Engineer skilled in React, Next.js, Flutter, and more. Explore Minuri's projects and designs.",
     creator: "@minuriviranga",
     images: ["/og-image.jpg"],
   },
@@ -87,8 +79,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${roboto.variable} ${nunitoSans.variable} antialiased`}
+        className={`${poppins.variable} ${inter.variable} antialiased`}
       >
+        {/* Background layers */}
+        <div className="mesh-gradient" aria-hidden="true" />
+        <div className="noise-overlay" aria-hidden="true" />
+        
         <CustomCursor />
         {children}
       </body>

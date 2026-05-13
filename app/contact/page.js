@@ -4,10 +4,10 @@ import Navbar from "../components/navbar";
 
 export default function ContactPage() {
   return (
-    <>
+    <div className="relative">
       <Navbar />
       <Contactme />
       <Footer />
-    </>
+    </div>
   );
-} 
+}
