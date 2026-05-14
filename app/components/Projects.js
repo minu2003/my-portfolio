@@ -51,11 +51,10 @@ export default function Projects() {
             <button
               key={cat}
               onClick={() => setActiveFilter(cat)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeFilter === cat
-                  ? "bg-white text-black shadow-lg shadow-white/10"
-                  : "bg-white/5 text-white/50 border border-white/10 hover:bg-white/10 hover:text-white/70"
-              }`}
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === cat
+                ? "bg-white text-black shadow-lg shadow-white/10"
+                : "bg-white/5 text-white/50 border border-white/10 hover:bg-white/10 hover:text-white/70"
+                }`}
             >
               {cat}
             </button>
@@ -74,7 +73,7 @@ export default function Projects() {
             >
               {/* Image */}
               <div
-                className="relative h-52 overflow-hidden cursor-pointer"
+                className="relative h-82 overflow-hidden cursor-pointer"
                 onClick={() => handleProjectClick(project)}
               >
                 <Image
@@ -86,7 +85,7 @@ export default function Projects() {
                 />
                 {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-                
+
                 {/* View project icon */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
                   <div className="w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-500">

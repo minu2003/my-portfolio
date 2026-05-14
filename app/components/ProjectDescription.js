@@ -58,7 +58,7 @@ export default function ProjectDescription() {
       case "Cinemax":
         return [project.image1, project.image2];
       case "Green Super Market":
-        return [project.image1, project.image2];
+        return [project.image1,];
       case "VI Learning Platform":
         return [project.image1, project.image2];
       case "Movie library":
@@ -66,6 +66,13 @@ export default function ProjectDescription() {
       default:
         return [project.image1];
     }
+  };
+
+  const getWebsiteUrl = (title) => {
+    const trimmedTitle = title.trim();
+    if (trimmedTitle === "My Portfolio") return "https://minuriviranga.com";
+    if (trimmedTitle === "Sinetcom Official Website") return "https://sinetcom-website.vercel.app";
+    return null;
   };
 
   const projectImages = getProjectImages(project.title);
@@ -128,17 +135,7 @@ export default function ProjectDescription() {
                 GitHub
                 <FaExternalLinkAlt className="w-3 h-3 opacity-60" />
               </a>
-              {project.title === "My Portfolio" && (
-                <a
-                  href="https://minuriviranga.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary text-sm py-2 px-5"
-                >
-                  Website
-                  <FaExternalLinkAlt className="w-3 h-3" />
-                </a>
-              )}
+
             </div>
           </div>
         </motion.div>
@@ -183,14 +180,28 @@ export default function ProjectDescription() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + index * 0.15 }}
               >
-                <div className="rounded-xl overflow-hidden">
+                <div className="rounded-xl overflow-hidden relative group">
                   <Image
                     src={image}
                     alt={`${project.title} Screenshot ${index + 1}`}
                     width={800}
                     height={500}
-                    className="w-full h-auto object-cover rounded-xl"
+                    className={`w-full h-auto object-cover rounded-xl transition-all duration-500 ${getWebsiteUrl(project.title) ? "group-hover:blur-sm group-hover:scale-105" : ""
+                      }`}
                   />
+                  {getWebsiteUrl(project.title) && (
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40">
+                      <a
+                        href={getWebsiteUrl(project.title)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary px-6 py-3 flex items-center gap-2"
+                      >
+                        Live Website
+                        <FaExternalLinkAlt className="w-4 h-4" />
+                      </a>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}

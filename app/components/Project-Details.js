@@ -1,20 +1,20 @@
-import greenSM1 from "@/app/assets/project-description/market1.png";
-import greenSM2 from "@/app/assets/project-description/market2.png";
+import greenSM1 from "@/app/assets/project-description/keells.webp";
 import movieLibrary1 from "@/app/assets/project-description/MLibrary.png";
 import cinemax1 from "@/app/assets/project-description/movie1.png";
 import cinemax2 from "@/app/assets/project-description/movie2.png";
-import portfolio1 from "@/app/assets/project-description/portfolio.png";
+import portfolio1 from "@/app/assets/project-description/minu.png";
 import vLearn1 from "@/app/assets/project-description/VI.png";
 import vLearn2 from "@/app/assets/project-description/VI-1.png";
-import cinemax from "@/app/assets/projects/cinemax.jpg";
+import cinemax from "@/app/assets/projects/movieB.jpeg";
 import dualTrackerImg2 from "@/app/assets/projects/Dual Tracker-dark mode.jpg";
 import dualTrackerImg1 from "@/app/assets/projects/Dual-tracker-lightmode.jpg";
 import dualTrackerImg from "@/app/assets/projects/dual-tracker.jpg";
-import greenSM from "@/app/assets/projects/greenSM.jpg";
-import movieLibrary from "@/app/assets/projects/movie.jpg";
-import portfolio from "@/app/assets/projects/portfolio.jpg";
-import sinetcom from "@/app/assets/projects/sinetcom.png";
-import vLearn from "@/app/assets/projects/VI-Learn.jpg";
+import greenSM from "@/app/assets/projects/keells.jpeg";
+import movieLibrary from "@/app/assets/projects/movie.jpeg";
+import portfolio from "@/app/assets/projects/minu.jpeg";
+import sinetcom from "@/app/assets/projects/sinetcom.jpeg";
+import sinetcom1 from "@/app/assets/project-description/sinetcom.png"
+import vLearn from "@/app/assets/projects/vlearn.jpeg";
 
 const ProjectData = [
     {
@@ -24,7 +24,7 @@ const ProjectData = [
         shortdesc:
             "AI-powered corporate website with OpenAI chatbot, n8n automation, and Pinecone vector DB. Built with Next.js and deployed on VPS.",
         image: sinetcom,
-        image1: sinetcom,
+        image1: sinetcom1,
         techStack: ["Next.js", "Node.js", "JavaScript", "Tailwind CSS", "OpenAI API", "n8n", "Pinecone", "VPS"],
         category: "Web Application",
         liveLink: "https://github.com/minu2003/sinetcom-website.git",
@@ -38,7 +38,7 @@ const ProjectData = [
             "A mobile app for tracking both personal and business finances.Built using Flutter and Firebase for real-time updates.Features secure login, dashboards, transaction insights.",
         image: dualTrackerImg,
         image1: dualTrackerImg1,
-        image2:  dualTrackerImg2,
+        image2: dualTrackerImg2,
         techStack: ["Dart", "Flutter", "Firebase", "Git"],
         category: "Mobile Development",
         liveLink: "https://github.com/minu2003/Dual-Money-Tracker.git",
@@ -65,10 +65,10 @@ const ProjectData = [
         image: cinemax,
         image1: cinemax1,
         image2: cinemax2,
-        techStack: ["React js", "Node.js", "MongoDB","Express js","HTML","CSS","Javacript","Tailwind CSS", "Paypal"],
+        techStack: ["React js", "Node.js", "MongoDB", "Express js", "HTML", "CSS", "Javacript", "Tailwind CSS", "Paypal"],
         category: "Web Application",
         liveLink: "https://github.com/Dinethchathurya/Movie-Booking-System.git",
-      },
+    },
     {
         title: "Green Super Market",
         description:
@@ -77,12 +77,11 @@ const ProjectData = [
             "An e-commerce platform with product browsing, cart, and PayPal checkout. Backend powered by Java and SQL. Optimized for fast queries and responsive design.",
         image: greenSM,
         image1: greenSM1,
-        image2: greenSM2,
-        techStack: ["HTML", "CSS", "Javascript", "MUI","SQL","Java","Paypal","Git"],
+        techStack: ["HTML", "CSS", "Javascript", "MUI", "SQL", "Java", "Paypal", "Git"],
         category: "Web Application",
         liveLink: "https://github.com/minu2003/Green-Super-Market.git",
-      },
-      {
+    },
+    {
         title: "VI Learning Platform",
         description:
             "A responsive and interactive online learning platform developed to deliver educational content in a user-friendly format. Built using React.js for dynamic UI rendering and Tailwind CSS for sleek, modern styling, the platform allows users to explore courses, view content, and navigate seamlessly. I focused on creating reusable components, responsive layouts, and smooth user interactions to ensure accessibility across devices. The project emphasizes clean design, intuitive navigation, and scalable architecture for future feature expansion.",
@@ -91,11 +90,11 @@ const ProjectData = [
         image: vLearn,
         image1: vLearn1,
         image2: vLearn2,
-        techStack: ["React JS", "Javascript", "Tailwind CSS","Html","CSS", "Git"],
+        techStack: ["React JS", "Javascript", "Tailwind CSS", "Html", "CSS", "Git"],
         category: "Web Application",
         liveLink: "https://github.com/minu2003/VI-Learning.git",
-      },
-      {
+    },
+    {
         title: "Movie library",
         description:
             "A responsive and visually engaging movie library web application developed as a test project using Vue.js and Tailwind CSS. The app allows users to search and filter movies using keywords through a dynamic search bar, making it easy to explore and collect their favorite titles. It displays movie posters, titles, and descriptions in a clean card layout. The design includes a contact form and map integration for a polished, professional look. This project highlights my skills in component-based development and real-time filtering.",
@@ -103,10 +102,10 @@ const ProjectData = [
             "A Vue.js-based movie browsing app with search and filter features. Clean UI displays posters and movie info in cards. Includes a contact form and Google Maps integration.",
         image: movieLibrary,
         image1: movieLibrary1,
-        techStack: ["Vue JS", "Javascript", "Tailwind CSS","Html","CSS", "Git"],
+        techStack: ["Vue JS", "Javascript", "Tailwind CSS", "Html", "CSS", "Git"],
         category: "Web Application",
         liveLink: "https://github.com/minu2003/movie-library.git",
-      },
+    },
 ]
 
 export default ProjectData;
