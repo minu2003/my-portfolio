@@ -29,10 +29,10 @@ export default function Navbar() {
   }, [isOpen]);
 
   const links = [
-    { label: "Home", id: "home" },
-    { label: "About", id: "about-me" },
-    { label: "Projects", id: "projects" },
-    { label: "Experience", id: "experience" },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/#about-me" },
+    { label: "Projects", href: "/#projects" },
+    { label: "Experience", href: "/#experience" },
     { label: "Contact", href: "/contact" },
   ];
 
