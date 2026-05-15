@@ -6,10 +6,10 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const navigationLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about-me" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/#about-me" },
     { name: "Projects", href: "#projects" },
-    { name: "Experience", href: "#experience" },
+    { name: "Experience", href: "/#experience" },
     { name: "Contact", href: "/contact" },
   ];
 
