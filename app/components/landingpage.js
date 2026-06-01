@@ -88,7 +88,7 @@ export default function LandingPage() {
       ),
     },
     {
-      href: "https://wa.me/qr/",
+      href: "https://wa.me/94716002864",
       label: "WhatsApp",
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
