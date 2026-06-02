@@ -28,7 +28,7 @@ const ProjectData = [
         techStack: ["Next.js", "Node.js", "JavaScript", "Tailwind CSS", "OpenAI API", "n8n", "Pinecone", "VPS"],
         category: "Web Application",
         liveLink: "https://www.sinetcomm.com/",
-        status: "Ongoing",
+        
     },
     {
         title: "Dual Money Tracker",
