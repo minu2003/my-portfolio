@@ -27,7 +27,7 @@ const ProjectData = [
         image1: sinetcom1,
         techStack: ["Next.js", "Node.js", "JavaScript", "Tailwind CSS", "OpenAI API", "n8n", "Pinecone", "VPS"],
         category: "Web Application",
-        liveLink: "",
+        liveLink: "https://www.sinetcomm.com/",
         status: "Ongoing",
     },
     {
