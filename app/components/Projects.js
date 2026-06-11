@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub, FaGlobe } from "react-icons/fa";
 import ProjectData from "./Project-Details";
 
 export default function Projects() {
@@ -113,15 +113,30 @@ export default function Projects() {
                   <h3 className="text-lg font-semibold text-white/90 group-hover:text-white transition-colors">
                     {project.title}
                   </h3>
-                  <a
-                    href={project.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-white/40 hover:bg-white/10 transition-all duration-300 flex-shrink-0 ml-3"
-                    aria-label={`View ${project.title} on GitHub`}
-                  >
-                    <FaGithub className="w-4 h-4" />
-                  </a>
+                  <div className="flex gap-2 flex-shrink-0 ml-3">
+                    {project.githubLink && (
+                      <a
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-white/40 hover:bg-white/10 transition-all duration-300"
+                        aria-label={`View ${project.title} on GitHub`}
+                      >
+                        <FaGithub className="w-4 h-4" />
+                      </a>
+                    )}
+                    {project.websiteLink && (
+                      <a
+                        href={project.websiteLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-white/40 hover:bg-white/10 transition-all duration-300"
+                        aria-label={`Visit ${project.title} website`}
+                      >
+                        <FaGlobe className="w-4 h-4" />
+                      </a>
+                    )}
+                  </div>
                 </div>
 
                 <p className="text-sm text-white/40 leading-relaxed mb-4 line-clamp-2">

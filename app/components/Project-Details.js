@@ -15,6 +15,8 @@ import portfolio from "@/app/assets/projects/minu.jpeg";
 import sinetcom from "@/app/assets/projects/sinetcom.jpeg";
 import sinetcom1 from "@/app/assets/project-description/sinetcom.png"
 import vLearn from "@/app/assets/projects/vlearn.jpeg";
+import pivithuru from "@/app/assets/projects/pivithuru.png";
+import pivithuru1 from "@/app/assets/projects/pivithuru1.jpeg";
 
 const ProjectData = [
     {
@@ -27,8 +29,19 @@ const ProjectData = [
         image1: sinetcom1,
         techStack: ["Next.js", "Node.js", "JavaScript", "Tailwind CSS", "OpenAI API", "n8n", "Pinecone", "VPS"],
         category: "Web Application",
-        liveLink: "https://www.sinetcomm.com/",
-        
+        websiteLink: "https://www.sinetcomm.com/",
+    },
+    {
+        title: "Personal Portfolio & Blog Management Platform",
+        description:
+            "Developed a modern personal portfolio and blog management platform for a client using Next.js, React.js, TypeScript, Tailwind CSS, and Supabase. Implemented a responsive and SEO-friendly portfolio website with dynamic blog publishing capabilities. Integrated a subscriber management system that automatically stores subscriber information in Supabase and sends personalized thank-you emails upon subscription. Developed an automated email notification system to instantly inform subscribers whenever new blog articles are published. Built secure authentication and content management features, enabling the client to easily manage portfolio content, blogs, and subscribers through an intuitive admin interface. Optimized performance, accessibility, and user experience across desktop and mobile devices.",
+        shortdesc:
+            "Client portfolio website with blog management, subscriber system, automated email notifications, and Supabase backend.",
+        image: pivithuru1,
+        image1: pivithuru,
+        techStack: ["Next.js", "Node.js", "TypeScript", "Tailwind CSS", "SuperBase","Email Automation","SEO","Responsive Design"],
+        category: "Web Application",
+        websiteLink: "https://www.pivithuruperera.com/",
     },
     {
         title: "Dual Money Tracker",
@@ -41,7 +54,7 @@ const ProjectData = [
         image2: dualTrackerImg2,
         techStack: ["Dart", "Flutter", "Firebase", "Git"],
         category: "Mobile Development",
-        liveLink: "https://github.com/minu2003/Dual-Money-Tracker.git",
+        githubLink: "https://github.com/minu2003/Dual-Money-Tracker.git",
     },
     {
         title: "My Portfolio",
@@ -53,8 +66,7 @@ const ProjectData = [
         image1: portfolio1,
         techStack: ["Next JS", "Tailwind CSS", "CSS", "Vercel", "Git"],
         category: "Web Application",
-        liveLink: "https://github.com/minu2003/my-portfolio.git",
-
+        githubLink: "https://github.com/minu2003/my-portfolio.git",
     },
     {
         title: "Cinemax",
@@ -67,7 +79,7 @@ const ProjectData = [
         image2: cinemax2,
         techStack: ["React js", "Node.js", "MongoDB", "Express js", "HTML", "CSS", "Javacript", "Tailwind CSS", "Paypal"],
         category: "Web Application",
-        liveLink: "https://github.com/Dinethchathurya/Movie-Booking-System.git",
+        githubLink: "https://github.com/Dinethchathurya/Movie-Booking-System.git",
     },
     {
         title: "Green Super Market",
@@ -79,7 +91,7 @@ const ProjectData = [
         image1: greenSM1,
         techStack: ["HTML", "CSS", "Javascript", "MUI", "SQL", "Java", "Paypal", "Git"],
         category: "Web Application",
-        liveLink: "https://github.com/minu2003/Green-Super-Market.git",
+        githubLink: "https://github.com/minu2003/Green-Super-Market.git",
     },
     {
         title: "VI Learning Platform",
@@ -92,7 +104,7 @@ const ProjectData = [
         image2: vLearn2,
         techStack: ["React JS", "Javascript", "Tailwind CSS", "Html", "CSS", "Git"],
         category: "Web Application",
-        liveLink: "https://github.com/minu2003/VI-Learning.git",
+        githubLink: "https://github.com/minu2003/VI-Learning.git",
     },
     {
         title: "Movie library",
@@ -104,7 +116,7 @@ const ProjectData = [
         image1: movieLibrary1,
         techStack: ["Vue JS", "Javascript", "Tailwind CSS", "Html", "CSS", "Git"],
         category: "Web Application",
-        liveLink: "https://github.com/minu2003/movie-library.git",
+        githubLink: "https://github.com/minu2003/movie-library.git",
     },
 ]
 

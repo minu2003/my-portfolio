@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
-import { FaArrowLeft, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaArrowLeft, FaExternalLinkAlt, FaGithub, FaGlobe } from "react-icons/fa";
 
 export default function ProjectDescription() {
   const searchParams = useSearchParams();
@@ -68,14 +68,9 @@ export default function ProjectDescription() {
     }
   };
 
-  const getWebsiteUrl = (title) => {
-    const trimmedTitle = title.trim();
-    if (trimmedTitle === "My Portfolio") return "https://minuriviranga.com";
-    if (trimmedTitle === "Sinetcom Official Website") return "https://sinetcom-website.vercel.app";
-    return null;
-  };
-
   const projectImages = getProjectImages(project.title);
+  const showScreenshotWebsiteOverlay =
+    project.websiteLink && project.title !== "Sinetcom Official Website";
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -125,17 +120,30 @@ export default function ProjectDescription() {
             </div>
 
             <div className="flex flex-wrap gap-3">
-              <a
-                href={project.liveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary text-sm py-2 px-5"
-              >
-                <FaGithub className="w-4 h-4" />
-                GitHub
-                <FaExternalLinkAlt className="w-3 h-3 opacity-60" />
-              </a>
-
+              {project.githubLink && (
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary text-sm py-2 px-5"
+                >
+                  <FaGithub className="w-4 h-4" />
+                  GitHub
+                  <FaExternalLinkAlt className="w-3 h-3 opacity-60" />
+                </a>
+              )}
+              {project.websiteLink && (
+                <a
+                  href={project.websiteLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary text-sm py-2 px-5"
+                >
+                  <FaGlobe className="w-4 h-4" />
+                  Website
+                  <FaExternalLinkAlt className="w-3 h-3 opacity-60" />
+                </a>
+              )}
             </div>
           </div>
         </motion.div>
@@ -186,13 +194,13 @@ export default function ProjectDescription() {
                     alt={`${project.title} Screenshot ${index + 1}`}
                     width={800}
                     height={500}
-                    className={`w-full h-auto object-cover rounded-xl transition-all duration-500 ${getWebsiteUrl(project.title) ? "group-hover:blur-sm group-hover:scale-105" : ""
+                    className={`w-full h-auto object-cover rounded-xl transition-all duration-500 ${showScreenshotWebsiteOverlay ? "group-hover:blur-sm group-hover:scale-105" : ""
                       }`}
                   />
-                  {getWebsiteUrl(project.title) && (
+                  {showScreenshotWebsiteOverlay && (
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40">
                       <a
-                        href={getWebsiteUrl(project.title)}
+                        href={project.websiteLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-primary px-6 py-3 flex items-center gap-2"
