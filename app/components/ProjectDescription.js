@@ -69,8 +69,6 @@ export default function ProjectDescription() {
   };
 
   const projectImages = getProjectImages(project.title);
-  const showScreenshotWebsiteOverlay =
-    project.websiteLink && project.title !== "Sinetcom Official Website";
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -188,28 +186,14 @@ export default function ProjectDescription() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + index * 0.15 }}
               >
-                <div className="rounded-xl overflow-hidden relative group">
+                <div className="rounded-xl overflow-hidden">
                   <Image
                     src={image}
                     alt={`${project.title} Screenshot ${index + 1}`}
                     width={800}
                     height={500}
-                    className={`w-full h-auto object-cover rounded-xl transition-all duration-500 ${showScreenshotWebsiteOverlay ? "group-hover:blur-sm group-hover:scale-105" : ""
-                      }`}
+                    className="w-full h-auto object-cover rounded-xl"
                   />
-                  {showScreenshotWebsiteOverlay && (
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40">
-                      <a
-                        href={project.websiteLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn-primary px-6 py-3 flex items-center gap-2"
-                      >
-                        Live Website
-                        <FaExternalLinkAlt className="w-4 h-4" />
-                      </a>
-                    </div>
-                  )}
                 </div>
               </motion.div>
             ))}
