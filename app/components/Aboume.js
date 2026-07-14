@@ -7,7 +7,7 @@ export default function AboutMe() {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     const skills = [
-        { category: "Frontend", items: ["Next.js", "React.js", "TypeScript", "JavaScript", "Vue.js", "jQuery", "HTML5", "CSS3", "Tailwind CSS", "MUI", "Bootstrap"] },
+        { category: "Frontend", items: ["Next.js", "React.js", "TypeScript", "JavaScript", "Angular", "Vue.js", "jQuery", "HTML5", "CSS3", "Tailwind CSS", "MUI", "Bootstrap"] },
         { category: "Mobile App", items: ["Flutter", "Dart", "Firebase"] },
         { category: "Backend", items: ["Node.js", "RESTful API", "Java", "SQL", "MongoDB", "Supabase", "API Integration", "n8n Automation"] },
         { category: "DevOps", items: ["CI/CD", "Docker", "Git", "AWS", "Vercel"] },
