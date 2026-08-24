@@ -8,15 +8,31 @@ export default function ExperienceSection() {
 
   const experiences = [
     {
-      role: "Web Developer | Cyber Security Analyst Intern",
+      role: "Software Engineer | Cyber Security Analyst Intern",
       company: "Sinetcom (Pvt) Ltd",
       period: "2025 – Present",
       highlights: [
-        "Developing the company's official website using Next.js, Node JS, JavaScript, and Tailwind CSS, delivering a responsive, scalable, and SEO-optimized corporate platform.",
-        "Integrating an AI-powered chatbot using OpenAI API, n8n automation workflows, and Pinecone vector database, enabling intelligent document-based responses and automated customer support.",
-        "Managing API integrations, VPS deployment (Hostinger), performance optimization, testing, debugging, and secure coding practices, while supporting basic firewall monitoring for system security.",
+        "Developed a full-stack internal CRM platform using Next.js, React, TypeScript, Supabase, and PostgreSQL to manage partners, customers, deals, sales pipelines, tasks, products, revenue, expenses, and reports.",
+        "Implemented deal and expense management workflows, allowing teams to track deal activities, customer visits, partner support, expenses, currencies, and supporting receipts within the CRM.",
+        "Built secure role-based access control and Row Level Security (RLS) to protect sensitive business data and ensure users can access only the information permitted by their roles.",
+        "Developed the company’s official corporate website using Next.js, Node.js, JavaScript, and Tailwind CSS, focusing on responsive design, scalability, and SEO.",
+        "Integrated an AI-powered chatbot using the OpenAI API, n8n automation, and Pinecone vector database to provide intelligent, document-based responses and automate customer support.",
+        "Used Next.js Server Actions for server-side validation and secure database operations, improving the reliability and consistency of CRM workflows.",
       ],
-      techUsed: ["Next.js", "Node.js", "Tailwind CSS", "OpenAI API", "n8n", "Pinecone", "VPS"],
+      techUsed: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Supabase",
+        "PostgreSQL",
+        "Node.js",
+        "JavaScript",
+        "Tailwind CSS",
+        "OpenAI API",
+        "n8n",
+        "Pinecone",
+        "RLS",
+      ],
     },
   ];
 
