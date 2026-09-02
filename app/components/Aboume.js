@@ -9,13 +9,14 @@ export default function AboutMe() {
     const skills = [
         { category: "Frontend", items: ["Next.js", "React.js", "TypeScript", "JavaScript", "Angular", "Vue.js", "jQuery", "HTML5", "CSS3", "Tailwind CSS", "MUI", "Bootstrap"] },
         { category: "Mobile App", items: ["Flutter", "Dart", "Firebase"] },
-        { category: "Backend", items: ["Node.js", "Express Js","RESTful API","JWT Authentication", "Java", "SQL", "MongoDB", "Supabase","PostgreSQL", "API Integration", "n8n Automation"] },
-        { category: "DevOps", items: ["CI/CD", "Docker", "Git", "AWS", "Vercel"] },
+        { category: "Backend", items: ["Node.js", "Express.js", "RESTful APIs", "JWT Authentication", "RBAC", "Java", "SQL", "MongoDB", "Supabase", "PostgreSQL", "Database Design"] },
+        { category: "AI & Automation", items: ["OpenAI API", "Pinecone", "n8n"] },
+        { category: "DevOps", items: ["CI/CD", "Docker", "Git", "AWS", "Cloud Deployment", "Vercel"] },
     ];
 
     const stats = [
-        { number: "3+", label: "Years Experience" },
-        { number: "20+", label: "Projects Completed" },
+        { number: "3+", label: "Years Hands-on" },
+        { number: "1+", label: "Year Industry" },
         { number: "15+", label: "Technologies" },
     ];
 
@@ -63,15 +64,21 @@ export default function AboutMe() {
                     >
                         <div className="glass-card p-8 mb-8">
                             <p className="text-lg text-white/60 leading-relaxed mb-6">
-                                I&apos;m a passionate and detail-oriented Software Engineering graduate with over
-                                <span className="text-white font-medium"> 4 years of experience</span> in front-end,
-                                full-stack, and mobile application development.
+                                BSc (Hons) Software Engineering graduate with a Second Class (Upper Division),
+                                <span className="text-white font-medium"> 1 year of professional industry experience</span>,
+                                and over <span className="text-white font-medium">3 years of hands-on experience</span> in
+                                full-stack web and cross-platform application development.
+                            </p>
+                            <p className="text-base text-white/45 leading-relaxed mb-4">
+                                Proficient in React.js, Next.js, Node.js, TypeScript, JavaScript, Java, SQL,
+                                MongoDB, and RESTful APIs, with a strong foundation in OOP, SOLID principles,
+                                data structures and algorithms, software architecture, SDLC, and secure programming.
                             </p>
                             <p className="text-base text-white/45 leading-relaxed">
-                                I enjoy transforming ideas into responsive, user-friendly digital experiences
-                                through clean and efficient code. Driven by curiosity and continuous learning,
-                                I thrive in collaborative environments where I can contribute to building
-                                innovative and impactful solutions that make a real difference.
+                                Experienced in authentication, Role-Based Access Control (RBAC), Git, CI/CD,
+                                Docker, AWS, cloud deployment, and database design. Hands-on with AI integration
+                                using OpenAI API, Pinecone, and n8n — focused on building secure, scalable,
+                                and maintainable software.
                             </p>
                         </div>
 
