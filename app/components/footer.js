@@ -63,37 +63,37 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative mt-10">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
-        {/* Top row: Name | Links | Social */}
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-10 sm:mb-14">
+    <footer className="relative mt-10 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10 lg:py-12">
+        {/* Top: Name | Links | Social */}
+        <div className="flex flex-col items-center lg:flex-row lg:items-center lg:justify-between gap-6 sm:gap-8 mb-8 sm:mb-10 lg:mb-14">
           <Link
             href="/"
-            className="text-xl sm:text-2xl font-bold text-white tracking-tight shrink-0"
+            className="text-lg sm:text-xl lg:text-2xl font-bold text-white tracking-tight shrink-0 text-center lg:text-left"
           >
             Minuri Viranga
           </Link>
 
-          <nav className="flex flex-wrap gap-x-6 sm:gap-x-8 gap-y-2">
+          <nav className="flex flex-wrap items-center justify-center gap-x-5 sm:gap-x-7 gap-y-2.5 max-w-md lg:max-w-none">
             {navigationLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm text-white/45 hover:text-white transition-colors duration-300"
+                className="text-sm text-white/45 hover:text-white active:text-white transition-colors duration-300 py-1"
               >
                 {link.name}
               </Link>
             ))}
           </nav>
 
-          <div className="flex items-center gap-2.5 shrink-0">
+          <div className="flex items-center justify-center gap-2 sm:gap-2.5 shrink-0">
             {socialLinks.map(({ name, href, icon }) => (
               <a
                 key={name}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-md bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+                className="w-10 h-10 sm:w-9 sm:h-9 rounded-md bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 active:bg-white/10 transition-all duration-300"
                 aria-label={name}
               >
                 {icon}
@@ -102,12 +102,12 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom row */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
-          <p className="text-xs text-white/30">
+        {/* Bottom */}
+        <div className="flex flex-col sm:flex-row justify-center lg:justify-between items-center gap-2 sm:gap-3 text-center lg:text-left">
+          <p className="text-[11px] sm:text-xs text-white/30 leading-relaxed">
             © {currentYear} Minuri Viranga. All rights reserved.
           </p>
-          <p className="text-xs text-white/30">
+          <p className="text-[11px] sm:text-xs text-white/30 leading-relaxed">
             Built with Next.js & Tailwind CSS
           </p>
         </div>
