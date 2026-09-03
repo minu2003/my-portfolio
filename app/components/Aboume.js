@@ -2,135 +2,116 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
+const skillGroups = [
+    {
+        category: "Frontend",
+        skills: ["Next.js", "React", "TypeScript", "JavaScript", "Tailwind CSS", "Angular", "Vue.js"],
+    },
+    {
+        category: "Backend",
+        skills: ["Node.js", "Java", "PostgreSQL", "MongoDB", "SQL", "Supabase", "REST APIs"],
+    },
+    {
+        category: "Mobile",
+        skills: ["Flutter", "Dart", "Firebase"],
+    },
+    {
+        category: "DevOps & AI",
+        skills: ["Docker", "AWS", "Git", "CI/CD", "OpenAI API", "Pinecone", "n8n"],
+    },
+];
+
 export default function AboutMe() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-    const skills = [
-        { category: "Frontend", items: ["Next.js", "React.js", "TypeScript", "JavaScript", "Angular", "Vue.js", "jQuery", "HTML5", "CSS3", "Tailwind CSS", "MUI", "Bootstrap"] },
-        { category: "Mobile App", items: ["Flutter", "Dart", "Firebase"] },
-        { category: "Backend", items: ["Node.js", "Express.js", "RESTful APIs", "JWT Authentication", "RBAC", "Java", "SQL", "MongoDB", "Supabase", "PostgreSQL", "Database Design"] },
-        { category: "AI & Automation", items: ["OpenAI API", "Pinecone", "n8n"] },
-        { category: "DevOps", items: ["CI/CD", "Docker", "Git", "AWS", "Cloud Deployment", "Vercel"] },
-    ];
-
-    const stats = [
-        { number: "3+", label: "Years Hands-on" },
-        { number: "1+", label: "Year Industry" },
-        { number: "15+", label: "Technologies" },
-    ];
 
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            transition: { staggerChildren: 0.1 },
+            transition: { staggerChildren: 0.05 },
         },
     };
 
     const itemVariants = {
-        hidden: { opacity: 0, y: 30 },
+        hidden: { opacity: 0, y: 16 },
         visible: {
             opacity: 1,
             y: 0,
-            transition: { duration: 0.6, ease: "easeOut" },
+            transition: { duration: 0.4, ease: "easeOut" },
         },
     };
 
     return (
-        <section id="about-me" className="relative py-16 px-6" ref={ref}>
-            <div className="max-w-6xl mx-auto">
-                {/* Section Header */}
+        <section id="about-me" className="relative py-16 sm:py-20 px-4 sm:px-6" ref={ref}>
+            <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+                {/* Left: Bio */}
                 <motion.div
-                    className="text-center mb-12"
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.6 }}
                 >
-                    <span className="text-sm font-medium tracking-widest uppercase text-neutral-400 mb-4 block">
-                        Get to Know Me
+                    <span className="text-xs font-semibold tracking-[0.2em] uppercase text-neutral-400 mb-5 block">
+                        About Me
                     </span>
-                    <h2 className="section-heading">
-                        About <span className="gradient-text">Me</span>
+
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-3">
+                        Who I{" "}
+                        <span className="gradient-text">Am</span>
                     </h2>
+
+                    <div className="w-14 h-[2px] bg-gradient-to-r from-white/50 to-transparent mb-8" />
+
+                    <p className="text-base sm:text-[1.05rem] text-white/55 leading-[1.85]">
+                        I&apos;m a BSc (Hons) Software Engineering graduate with a Second Class (Upper Division),{" "}
+                        <span className="text-white/80">{" "}1 year of professional industry experience</span> and over{" "}
+                        <span className="text-white/80">3 years</span> building full-stack web and cross-platform
+                        applications. I specialize in React, Next.js, and Node.js — with hands-on experience in
+                        authentication, RBAC, cloud deployment, and AI integration using OpenAI, Pinecone, and n8n.
+                    </p>
+
+                    <p className="text-base sm:text-[1.05rem] text-white/55 leading-[1.85] mt-5">
+                        With a strong foundation in OOP, SOLID principles, and software architecture, I focus on
+                        writing clean, scalable code and delivering secure, maintainable software that solves real
+                        problems.
+                    </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-                    {/* Left: Bio */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        animate={isInView ? { opacity: 1, x: 0 } : {}}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                    >
-                        <div className="glass-card p-8 mb-8">
-                            <p className="text-lg text-white/60 leading-relaxed mb-6">
-                                BSc (Hons) Software Engineering graduate with a Second Class (Upper Division),
-                                <span className="text-white font-medium"> 1 year of professional industry experience</span>,
-                                and over <span className="text-white font-medium">3 years of hands-on experience</span> in
-                                full-stack web and cross-platform application development.
-                            </p>
-                            <p className="text-base text-white/45 leading-relaxed mb-4">
-                                Proficient in React.js, Next.js, Node.js, TypeScript, JavaScript, Java, SQL,
-                                MongoDB, and RESTful APIs, with a strong foundation in OOP, SOLID principles,
-                                data structures and algorithms, software architecture, SDLC, and secure programming.
-                            </p>
-                            <p className="text-base text-white/45 leading-relaxed">
-                                Experienced in authentication, Role-Based Access Control (RBAC), Git, CI/CD,
-                                Docker, AWS, cloud deployment, and database design. Hands-on with AI integration
-                                using OpenAI API, Pinecone, and n8n — focused on building secure, scalable,
-                                and maintainable software.
-                            </p>
-                        </div>
+                {/* Right: Tech Stack */}
+                <motion.div
+                    initial={{ opacity: 0, x: 30 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 0.6, delay: 0.15 }}
+                >
+                    <span className="text-xs font-semibold tracking-[0.2em] uppercase text-neutral-500 mb-6 block">
+                        Tech Stack
+                    </span>
 
-                        {/* Stats Grid */}
-                        <motion.div
-                            className="grid grid-cols-2 gap-4"
-                            variants={containerVariants}
-                            initial="hidden"
-                            animate={isInView ? "visible" : "hidden"}
-                        >
-                            {stats.map(({ number, label }, index) => (
-                                <motion.div
-                                    key={label}
-                                    variants={itemVariants}
-                                    className={`glass-card p-5 text-center group ${index === 2 ? 'col-span-2' : ''}`}
-                                >
-                                    <p className="text-3xl font-bold gradient-text mb-1">{number}</p>
-                                    <p className="text-xs text-white/40 uppercase tracking-wider">{label}</p>
-                                </motion.div>
-                            ))}
-                        </motion.div>
-                    </motion.div>
-
-                    {/* Right: Skills */}
                     <motion.div
-                        initial={{ opacity: 0, x: 30 }}
-                        animate={isInView ? { opacity: 1, x: 0 } : {}}
-                        transition={{ duration: 0.6, delay: 0.4 }}
+                        className="space-y-5"
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate={isInView ? "visible" : "hidden"}
                     >
-                        <h3 className="text-xl font-semibold text-white/80 mb-6">Tech Stack</h3>
-                        <div className="space-y-6">
-                            {skills.map(({ category, items }) => (
-                                <motion.div
-                                    key={category}
-                                    className="glass-card p-6"
-                                    variants={itemVariants}
-                                >
-                                    <p className="text-sm font-medium text-neutral-400 mb-3 uppercase tracking-wider">
+                        {skillGroups.map(({ category, skills }) => (
+                            <motion.div key={category} variants={itemVariants}>
+                                <div className="flex items-center gap-3 mb-3">
+                                    <span className="text-[0.7rem] font-semibold uppercase tracking-widest text-white/40 shrink-0">
                                         {category}
-                                    </p>
-                                    <div className="flex flex-wrap gap-2">
-                                        {items.map((skill) => (
-                                            <span key={skill} className="tech-tag">
-                                                {skill}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
+                                    </span>
+                                    <div className="flex-1 h-px bg-white/10" />
+                                </div>
+                                <div className="flex flex-wrap gap-2">
+                                    {skills.map((skill) => (
+                                        <span key={skill} className="tech-tag text-xs">
+                                            {skill}
+                                        </span>
+                                    ))}
+                                </div>
+                            </motion.div>
+                        ))}
                     </motion.div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

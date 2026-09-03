@@ -37,21 +37,22 @@ export default function ExperienceSection() {
   ];
 
   return (
-    <section id="experience" className="relative py-12 sm:py-16 px-4 sm:px-6 overflow-hidden" ref={ref}>
-      <div className="max-w-4xl mx-auto w-full min-w-0">
+    <section id="experience" className="relative py-16 sm:py-20 px-4 sm:px-6 overflow-hidden" ref={ref}>
+      <div className="max-w-6xl mx-auto w-full min-w-0">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-8 sm:mb-12"
+          className="mb-10 sm:mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-xs sm:text-sm font-medium tracking-widest uppercase text-neutral-400 mb-3 sm:mb-4 block">
+          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-neutral-400 mb-5 block">
             Career Path
           </span>
-          <h2 className="section-heading !text-[1.75rem] sm:!text-4xl md:!text-5xl">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-3">
             Work <span className="gradient-text">Experience</span>
           </h2>
+          <div className="w-14 h-[2px] bg-gradient-to-r from-white/50 to-transparent mb-8" />
         </motion.div>
 
         {/* Timeline */}
