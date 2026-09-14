@@ -27,7 +27,7 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <motion.div
-          className="mb-10 sm:mb-12"
+          className="mb-10 sm:mb-12 flex flex-col items-center md:items-start text-center md:text-left"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -38,12 +38,12 @@ export default function Projects() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-3">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <div className="w-14 h-[2px] bg-gradient-to-r from-white/50 to-transparent mb-8" />
+          <div className="w-14 h-[2px] bg-gradient-to-r from-transparent via-white/50 to-transparent md:from-white/50 md:to-transparent mb-8" />
         </motion.div>
 
         {/* Filter Tabs */}
         <motion.div
-          className="flex flex-wrap gap-2 mb-10 sm:mb-14"
+          className="flex flex-wrap justify-center md:justify-start gap-2 mb-10 sm:mb-14"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}

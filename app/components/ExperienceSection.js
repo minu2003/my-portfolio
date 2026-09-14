@@ -41,7 +41,7 @@ export default function ExperienceSection() {
       <div className="max-w-6xl mx-auto w-full min-w-0">
         {/* Section Header */}
         <motion.div
-          className="mb-10 sm:mb-12"
+          className="mb-10 sm:mb-12 flex flex-col items-center md:items-start text-center md:text-left"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -52,7 +52,7 @@ export default function ExperienceSection() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-3">
             Work <span className="gradient-text">Experience</span>
           </h2>
-          <div className="w-14 h-[2px] bg-gradient-to-r from-white/50 to-transparent mb-8" />
+          <div className="w-14 h-[2px] bg-gradient-to-r from-transparent via-white/50 to-transparent md:from-white/50 md:to-transparent mb-8" />
         </motion.div>
 
         {/* Timeline */}
