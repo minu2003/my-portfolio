@@ -124,15 +124,15 @@ export default function LandingPage() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/5 rounded-full blur-[200px]" />
 
       <motion.div
-        className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center pt-28 sm:pt-32 pb-16"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center pt-20 sm:pt-28 lg:pt-32 pb-16 min-w-0"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         {/* Left: Text Content */}
-        <div className="text-center lg:text-left">
-          <motion.div variants={itemVariants} className="mb-4">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-white/10 text-white border border-white/20">
+        <div className="text-center lg:text-left w-full min-w-0">
+          <motion.div variants={itemVariants} className="mb-3 sm:mb-4 flex justify-center lg:justify-start">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-white/10 text-white border border-white/20">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
               Available for work
             </span>
@@ -140,68 +140,68 @@ export default function LandingPage() {
 
           <motion.h1
             variants={itemVariants}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-[1.1] mb-4"
+            className="text-[2.75rem] xs:text-5xl sm:text-6xl md:text-6xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-[1.06] mb-3 sm:mb-4 text-center lg:text-left"
           >
             <span className="text-white/90">Hello, I&apos;m</span>
             <br />
             <span className="gradient-text">Minuri Viranga</span>
           </motion.h1>
 
-          <motion.div variants={itemVariants} className="mb-8">
-            <p className="text-xl sm:text-2xl text-white/40 font-light">
+          <motion.div variants={itemVariants} className="mb-6 sm:mb-8 text-center lg:text-left">
+            <p className="text-lg sm:text-2xl text-white/50 font-normal">
               {displayedText}
               <span className="animate-blink text-neutral-400 ml-0.5">|</span>
             </p>
           </motion.div>
 
-          {/* Mobile Image (Visible only on mobile) */}
+          {/* Mobile Image (Visible only on mobile - Full width with clean margin like reference) */}
           <motion.div
-            className="flex justify-center lg:hidden mb-10"
+            className="flex justify-center lg:hidden mb-8 sm:mb-10 w-full"
             variants={itemVariants}
           >
-            <div className="relative">
+            <div className="relative w-full max-w-md mx-auto">
               {/* Glow behind image */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-3xl blur-3xl scale-110" />
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-3xl blur-3xl scale-105" />
 
-              {/* Image container */}
-              <div className="relative w-[320px] h-[400px] sm:w-[380px] sm:h-[480px] md:w-[440px] md:h-[540px] rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-white/10 bg-neutral-900">
+              {/* Image container - full width with clean border and 4:5 aspect ratio */}
+              <div className="relative w-full aspect-[4/5] sm:aspect-auto sm:h-[480px] md:h-[520px] rounded-3xl overflow-hidden border border-white/15 shadow-2xl shadow-black/60 bg-neutral-900">
                 <Image
                   src={MinuriImage}
                   alt="Minuri Viranga - Software Engineer"
                   fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 320px, (max-width: 768px) 380px, (max-width: 1024px) 440px"
+                  className="object-cover object-top"
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 440px, 480px"
                   priority
                 />
                 {/* Subtle gradient overlay at bottom */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+                {/* Floating badge - Projects (neatly inset on mobile, floating on tablet) */}
+                <motion.div
+                  className="absolute bottom-3 left-3 sm:-bottom-5 sm:-left-5 glass-card px-3.5 py-2 sm:px-5 sm:py-3 z-10 shadow-xl"
+                  animate={{ y: [0, -6, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <p className="text-xl sm:text-2xl font-bold gradient-text">20+</p>
+                  <p className="text-[10px] sm:text-xs text-white/50">Projects</p>
+                </motion.div>
+
+                {/* Floating badge - Experience (neatly inset on mobile, floating on tablet) */}
+                <motion.div
+                  className="absolute top-3 right-3 sm:-top-5 sm:-right-5 glass-card px-3.5 py-2 sm:px-5 sm:py-3 z-10 shadow-xl"
+                  animate={{ y: [0, -6, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+                >
+                  <p className="text-xl sm:text-2xl font-bold gradient-text">3+</p>
+                  <p className="text-[10px] sm:text-xs text-white/50">Years Exp</p>
+                </motion.div>
               </div>
-
-              {/* Floating badge - Projects */}
-              <motion.div
-                className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 glass-card px-5 py-3 z-10"
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <p className="text-2xl font-bold gradient-text">20+</p>
-                <p className="text-xs text-white/50">Projects</p>
-              </motion.div>
-
-              {/* Floating badge - Experience */}
-              <motion.div
-                className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 glass-card px-5 py-3 z-10"
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-              >
-                <p className="text-2xl font-bold gradient-text">3+</p>
-                <p className="text-xs text-white/50">Years Exp</p>
-              </motion.div>
             </div>
           </motion.div>
 
           <motion.p
             variants={itemVariants}
-            className="text-base sm:text-lg text-white/50 max-w-lg mx-auto lg:mx-0 leading-relaxed mb-10"
+            className="text-base sm:text-lg text-white/55 max-w-lg mx-auto lg:mx-0 text-center lg:text-left leading-relaxed mb-8 sm:mb-10"
           >
             Crafting elegant digital experiences through clean code and creative design.
             3+ years building web &amp; mobile apps that users love.
@@ -210,15 +210,15 @@ export default function LandingPage() {
           {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-8 sm:mb-10 w-full"
           >
-            <button onClick={navigateToContact} className="btn-primary">
+            <button onClick={navigateToContact} className="btn-primary w-full sm:w-auto justify-center">
               Let&apos;s Talk
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </button>
-            <button onClick={downloadResume} className="btn-secondary">
+            <button onClick={downloadResume} className="btn-secondary w-full sm:w-auto justify-center">
               Download CV
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -296,7 +296,7 @@ export default function LandingPage() {
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2 }}
