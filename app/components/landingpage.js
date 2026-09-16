@@ -203,8 +203,7 @@ export default function LandingPage() {
             variants={itemVariants}
             className="text-base sm:text-lg text-white/55 max-w-lg mx-auto lg:mx-0 text-center lg:text-left leading-relaxed mb-8 sm:mb-10"
           >
-            Crafting elegant digital experiences through clean code and creative design.
-            3+ years building web &amp; mobile apps that users love.
+            Specialized in Software Engineering, Full Stack Web &amp; Mobile Apps, Cloud Architecture &amp; AI Integration.
           </motion.p>
 
           {/* CTA Buttons */}
